@@ -14,7 +14,7 @@ namespace Home_Business_Managing
         private double stock;
         private string measureUnit;
 
-
+        // Enkapsulasi
         public string gdsType { get => type; set => type = value; }
         public double Stock { get => stock; set => stock = value; }
         public string msrUnit { get => measureUnit; set => measureUnit = value; }
@@ -33,7 +33,7 @@ namespace Home_Business_Managing
              this.Stock += amount;
         }
 
-        public void Sub(double amount, string priceListKey)  // Mungkin karena rusak atau hilang
+        public void Sub(double amount, string priceListKey) 
         {
             if (priceList.ContainsKey(priceListKey))
             {

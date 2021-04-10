@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Home_Business_Managing
 {
+    // Single Responsibility
     class BottledHoney : Goods  // Konsep Inheritance
     {
 
@@ -15,8 +16,9 @@ namespace Home_Business_Managing
             this.Stock = Stock;
             this.msrUnit = msrUnit;
         }
-
-        public new void Info()
+        
+        // Polimorphism
+        public new void Info() // Open-Closed Principle
         {
             Console.WriteLine($" Jenis : {gdsType}"); // untuk pulsa karena gk ada ukuran
             Console.WriteLine($" Jumlah stok : {Stock} {msrUnit}");

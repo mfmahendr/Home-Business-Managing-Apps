@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Home_Business_Managing
 {
-    public static class CalculateIncome
-    {
-        // Polimorphism static
+    public static class CalculateIncome // Single Responsibility Principle
+    {                                   // di mana tanggung jawab class ini hanya untuk melakukan perhitungan data untuk laba-rugi
+        // Polimorphism static          // artinya ketika class ini diubah maka alasannya pasti ada pada perhitungan income-nya
         public static int CalculateRevenue(int quantity, int price)
         {
             return price * quantity;
@@ -67,7 +67,8 @@ namespace Home_Business_Managing
             return grossProfit;
         }
 
-        // Open-Closed principle karena dalam class ini, ketika terjadi perubahan
+        // Open-Closed principle 
+        // karena dalam class ini, ketika terjadi perubahan
         // cara menghitung, maka method-method lain yang sudah ada tidak
         // perlu dimodifikasi, cukup ditambahkan pada saat ingin menggunakan
         // class ini lagi nantinya

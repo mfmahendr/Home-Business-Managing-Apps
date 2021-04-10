@@ -9,19 +9,16 @@ namespace Home_Business_Managing
 {
     class Program
     {
-
-        
-
         static void Main(string[] args)
         {
-
 
             // Instansiasi objek dan inisialisasi nilai
             RefilledWater rflWater = new RefilledWater("Isi ulang air", 3800, "liter");
             BottledHoney btlHoney = new BottledHoney("Madu", 45000, "gram");
             Credit credit = new Credit("Pulsa", 500000, "rupiah");
             SwappedLPG lpg = new SwappedLPG("Gas LPG", 150, "kg");
-
+            
+            // Mengatur barang yang dijual
             List<string> listOfGoods = new List<string>();
             listOfGoods.Add(rflWater.gdsType);
             listOfGoods.Add(btlHoney.gdsType);
@@ -45,25 +42,8 @@ namespace Home_Business_Managing
 
             lpg.priceList.Add("3", 20000);
 
-            /*List<double> revRflWater = new List<double>();
-            List<double> revBtlHoney = new List<double>();
-            List<double> revCredit = new List<double>();
-            List<double> revSwappedLPG = new List<double>();
-
-            List<double> expRflWater = new List<double>();
-            List<double> expBtlHoney = new List<double>();
-            List<double> expCredit = new List<double>();
-            List<double> expSwappedLPG = new List<double>();*/
-
             Dictionary<string, double> expenseOf = new Dictionary<string, double>();
             Dictionary<string, double> revenueOf = new Dictionary<string, double>();
-            
-            /*
-            double totalExpOfRflWater = 0; double totalRevOfRflWater = 0;
-            double totalExpOfBtlHoney = 0; double totalRevOfBtlHoney = 0;
-            double totalExpOfCredit = 0; double totalRevOfCredit = 0;
-            double totalExpOfLPG = 0; double totalRevOfLPG = 0;
-            */
 
             expenseOf.Add(rflWater.gdsType, 0);
             expenseOf.Add(btlHoney.gdsType, 0);
@@ -186,32 +166,32 @@ namespace Home_Business_Managing
                         if (inputBuyGoods == "1")
                         {
                             Console.WriteLine("==> Jumlah total liter air yang ditambah?");
-                            inputBuyAmount = Convert.ToDouble(Console.ReadLine());
+                            inputBuyAmount = Convert.ToDouble(Console.Read());
                             Console.WriteLine("==> Total biaya yang dikeluarkan?");
-                            inputExpense = Convert.ToDouble(Console.ReadLine());
+                            inputExpense = Convert.ToDouble(Console.Read());
                             rflWater.Add(inputBuyAmount);
                             expenseOf[rflWater.gdsType] += inputExpense;
                         }
                         else if (inputBuyGoods == "2")
                         {
                             Console.WriteLine("==> Jumlah total gram yang ditambahkan?");
-                            inputBuyAmount = Convert.ToDouble(Console.ReadLine());
+                            inputBuyAmount = Convert.ToDouble(Console.Read());
                             Console.WriteLine("==> Total biaya yang dikeluarkan?");
-                            inputExpense = Convert.ToDouble(Console.ReadLine());
+                            inputExpense = Convert.ToDouble(Console.Read());
                             btlHoney.Add(inputBuyAmount);
                             expenseOf[btlHoney.gdsType] += inputExpense;
                         }
                         else if (inputBuyGoods == "3")
                         {
                             Console.WriteLine("Jumlah pulsa yang daitambahkan?");
-                            inputBuyAmount = Convert.ToDouble(Console.ReadLine());
+                            inputBuyAmount = Convert.ToDouble(Console.Read());
                             credit.Add(inputBuyAmount);
                             expenseOf[credit.gdsType] += inputBuyAmount;
                         }
                         else if (inputBuyGoods == "4")
                         {
                             Console.WriteLine("==> Total biaya yang dikeluarkan?");
-                            inputExpense = Convert.ToDouble(Console.ReadLine());
+                            inputExpense = Convert.ToDouble(Console.Read());
                             expenseOf[lpg.gdsType] += inputExpense;
 
                             Console.WriteLine("==> Ingin tambah hingga kapasitas maksimum (150 kg atau 50 tabung gas)?)");
@@ -227,7 +207,7 @@ namespace Home_Business_Managing
                                 else if (inputYes == "t")
                                 {
                                     Console.WriteLine("Jadi, mau menambahkan berapa?");
-                                    inputBuyAmount = Convert.ToDouble(Console.ReadLine());
+                                    inputBuyAmount = Convert.ToDouble(Console.Read());
                                     lpg.Add(inputBuyAmount);
                                 }
                                 else { Console.WriteLine("Pilih y atau t saja"); }
@@ -250,7 +230,7 @@ namespace Home_Business_Managing
                         Console.WriteLine("==> Barang yang akan dijual? ");
                         string inputSoldGoods = Console.ReadLine();
                         Console.WriteLine("==> Jumlah barang yang akan dijual?");
-                        double inputSoldAmount = Convert.ToDouble(Console.ReadLine());
+                        double inputSoldAmount = Convert.ToDouble(Console.Read());
 
                         if(inputSoldGoods == "1")
                         {
@@ -306,6 +286,7 @@ namespace Home_Business_Managing
                     }
             }
 
+            // Menu untuk Login
         LOGIN:
             Console.Clear();
             Console.WriteLine("|===================================================|");
@@ -331,16 +312,23 @@ namespace Home_Business_Managing
                 case "2":
                     {
                         apps.SignUp();
+                        Console.WriteLine("Proses Sign Up selesai");
+                        Console.WriteLine("Silakan Log In...");
+                        Console.ReadLine();
                         goto LOGIN;
                     }
                 case "3":
                     {
                         apps.ForgotUsername();
+                        Console.WriteLine("Proses selesai");
+                        Console.WriteLine("Silakan Log In...");        
                         goto LOGIN;
                     }
                 case "4":
                     {
                         apps.ForgotPassword();
+                        Console.WriteLine("Proses setting ulang password berhasil");
+                        Console.WriteLine("Silakan Log In...");
                         goto LOGIN;
                     }
                 case "5":

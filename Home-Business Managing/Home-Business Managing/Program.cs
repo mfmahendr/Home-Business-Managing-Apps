@@ -134,10 +134,10 @@ namespace Home_Business_Managing
                         Console.WriteLine("4. Gas LPG");
                         lpg.Info();
                         Console.WriteLine("5. Kembali ke menu");
-                        Console.WriteLine("\n Produk mana yang akan diubah?");
-                        string inputToChange = Console.ReadLine();
                         while (true)
                         {
+                        Console.WriteLine("\n Produk mana yang akan diubah?");
+                        string inputToChange = Console.ReadLine();
                             if (inputToChange == "1") { rflWater.ChangeInfo(); }
                             else if (inputToChange == "2") { btlHoney.ChangeInfo(); }
                             else if (inputToChange == "3") { credit.ChangeInfo(); }
@@ -195,11 +195,11 @@ namespace Home_Business_Managing
                             expenseOf[lpg.gdsType] += inputExpense;
 
                             Console.WriteLine("==> Ingin tambah hingga kapasitas maksimum (150 kg atau 50 tabung gas)?)");
-                            Console.WriteLine("==> Pilih y untuk ya dan  t untuk tidak");
-                            string inputYes = Console.ReadLine();
 
                             while (true)
                             {
+                            Console.WriteLine("==> Pilih y untuk ya dan  t untuk tidak");
+                            string inputYes = Console.ReadLine();
                                 if (inputYes == "y")
                                 {
                                     lpg.Add(lpg.MaxToAdd());

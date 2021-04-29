@@ -5,3 +5,10 @@ C:\Users\LENOVO\source\repos\Home-Business Managing\Home-Business Managing\obj\D
 C:\Users\LENOVO\source\repos\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\source\repos\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.exe
 C:\Users\LENOVO\source\repos\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.pdb
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\bin\Debug\Home-Business Managing.exe.config
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\bin\Debug\Home-Business Managing.exe
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\bin\Debug\Home-Business Managing.pdb
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.csprojAssemblyReference.cache
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.exe
+C:\Users\LENOVO\Source\Repos\Home-Business-Managing-Apps\Home-Business Managing\Home-Business Managing\obj\Debug\Home-Business Managing.pdb

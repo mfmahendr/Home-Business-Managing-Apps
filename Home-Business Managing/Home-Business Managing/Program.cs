@@ -198,22 +198,33 @@ namespace Home_Business_Managing
 
                             while (true)
                             {
-                            Console.WriteLine("==> Pilih y untuk ya dan  t untuk tidak");
+                            Console.WriteLine("    Pilih y untuk ya dan  t untuk tidak");
                             string inputYes = Console.ReadLine();
                                 if (inputYes == "y")
                                 {
                                     lpg.Add(lpg.MaxToAdd());
+                                    break;
                                 }
                                 else if (inputYes == "t")
                                 {
                                     Console.WriteLine("Jadi, mau menambahkan berapa?");
                                     inputBuyAmount = Convert.ToDouble(Console.Read());
                                     lpg.Add(inputBuyAmount);
+                                    break;
                                 }
                                 else { Console.WriteLine("Pilih y atau t saja"); }
                             }
                         }
                         else { Console.WriteLine("Pilihan tidak ditemukan"); goto BELI; }
+                        Console.Clear();
+                        Console.WriteLine("Ingin menambahkan stok lagi?(y/t)");
+                        while (true) 
+                        {
+                            string inputToAdd = Console.ReadLine();
+                            if(inputToAdd == "y") { goto BELI; }
+                            else if(inputToAdd == "t"){ goto MENU; }
+                            else { Console.WriteLine("Pilihan tidak ditemukan!"); }
+                        }
                         break;
                     }
                 case "5":
@@ -321,7 +332,8 @@ namespace Home_Business_Managing
                     {
                         apps.ForgotUsername();
                         Console.WriteLine("Proses selesai");
-                        Console.WriteLine("Silakan Log In...");        
+                        Console.WriteLine("Silakan Log In...");  
+                        Console.ReadLine();
                         goto LOGIN;
                     }
                 case "4":
@@ -329,16 +341,19 @@ namespace Home_Business_Managing
                         apps.ForgotPassword();
                         Console.WriteLine("Proses setting ulang password berhasil");
                         Console.WriteLine("Silakan Log In...");
+                        Console.ReadLine();
                         goto LOGIN;
                     }
                 case "5":
                     {
                         Console.WriteLine("Anda memilih keluar dari aplikasi");
+                        Console.ReadLine();
                         return;
                     }
                 default:
                     {
                         Console.WriteLine("Maaf, pilihan hanya berupa 1-5 saja. Silakan pilih lagi");
+                        Console.ReadLine();
                         goto LOGIN;
                     }
             }

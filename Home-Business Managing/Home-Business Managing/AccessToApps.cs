@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Home_Business_Managing
 {
-    public class AccessToApps : IRegister, IInOut, IForgot // Multiple Inheritance
+    public class AccessToApps : IInOut, IForgot // Multiple Inheritance
     {
         public void ForgotPassword()
         {
@@ -15,21 +15,23 @@ namespace Home_Business_Managing
 
         public void ForgotUsername()
         {
+            
         }
 
-        public void Login()
+        public bool Login(string username, string password)
         {
+            if(username == Owner.Username && Owner.Password == password)
+            {
+                return true;
+            }
+            else
+                return false;
         }
 
         public void Logout()
         {
-        }
 
-        public void SignUp()
-        {
         }
-
-        
 
         
     }
